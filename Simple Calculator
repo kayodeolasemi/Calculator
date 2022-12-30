@@ -1,0 +1,82 @@
+# Calculator
+
+# Simple calculator
+
+# Operator List
+funcList = ['a', 's', 'd', 'm', 'r']
+
+
+# Computer Functions
+
+def addFunc(var1, var2):
+    res = var1 + var2
+    return res
+
+def subtFunc(var1, var2):
+    res = var1 - var2
+    return res
+
+def divFunc(var1, var2):
+    res = var1 / var2
+    return res
+
+def multFunc(var1, var2):
+    res = var1 * var2
+    return res
+
+def remainderFunc(var1, var2):
+    res = (var1 % var2)
+    return res
+
+
+# Get User input
+var1 = float(input('please enter the first value:  '))
+var2 = float(input('please enter the second value:  '))
+opr=input('please select operation from the following:a(addition),s(subtract),d(division),m(multiplication),r(remainder):')
+
+
+
+# Preprocess user input
+
+if int(var1) or float(var1):
+    var1 = float(var1)
+else:
+    print('please input only numbers')
+    
+if int(var2) or float(var2):
+    var2 = float(var2)
+else:
+    print('please input only numbers')
+
+
+    
+    
+# Check to be sure that users specifies the right operation letter
+
+if opr in funcList:     
+    opr = opr
+else:
+    print('you have not specified the right operation')
+
+    
+
+    
+# Process calculation and output result
+if opr == 'a':
+    res = addFunc(var1, var2)
+    print(f'the result of the computation is {res}')
+elif opr == 's':
+    res = subtFunc(var1, var2)
+    print(f'the result of the computation is {res}')
+elif opr == 'd':
+    res = divFunc(var1, var2)
+    print(f'the result of the computation is {res}')
+elif opr == 'm':
+    res = multFunc(var1, var2)
+    print(f'the result of the computation is {res}')
+elif opr == 'r':
+    res = remainderFunc(var1, var2)
+    print(f'the result of the computation is {res}')
+
+
+
